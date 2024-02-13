@@ -9,7 +9,7 @@ public class Main {
     private static final String TELEFONE_DIGITADO_INVALIDO = "Telefone digitado inválido. Informe o número de telefone:";
     private static Agenda agenda;
     private static Scanner scanner;
-    public static void main(String[] args) {
+    void main() {
         agenda = new Agenda();
         scanner = new Scanner(System.in);
         System.out.println("Bem-vindo ao software Agenda IES - Workshop 2024");
