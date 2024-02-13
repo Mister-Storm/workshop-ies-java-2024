@@ -1,11 +1,11 @@
-package v1;
+package br.com.ies.v1;
 
 import java.util.Scanner;
 
 public class Main {
     private static final String TEXTO_PARA_INFORMAR_O_NOME = "Informe o nome: ";
     private static final String NOME_DIGITADO_INVALIDO = "Nome digitado inválido. Informe o nome: ";
-    private static final String INFORME_O_NÚMERO_DE_TELEFONE = "Informe o número de telefone: ";
+    private static final String INFORME_O_NUMERO_DE_TELEFONE = "Informe o número de telefone: ";
     private static final String TELEFONE_DIGITADO_INVALIDO = "Telefone digitado inválido. Informe o número de telefone:";
     private static Agenda agenda;
     private static Scanner scanner;
@@ -31,7 +31,6 @@ public class Main {
         }
     }
     private static void exibeTextoDeopcoes() {
-
         try {
             Thread.sleep(1000L);
         } catch (InterruptedException e) {
@@ -48,7 +47,7 @@ public class Main {
     }
     private static void incluirPessoa() {
         String nome = getDadosDaPessoa(TEXTO_PARA_INFORMAR_O_NOME, NOME_DIGITADO_INVALIDO);
-        String telefone = getDadosDaPessoa(INFORME_O_NÚMERO_DE_TELEFONE, TELEFONE_DIGITADO_INVALIDO);
+        String telefone = getDadosDaPessoa(INFORME_O_NUMERO_DE_TELEFONE, TELEFONE_DIGITADO_INVALIDO);
         Pessoa pessoa = new Pessoa(nome, telefone);
         agenda.adicionaPessoa(pessoa);
         System.out.println("Pessoa incluída com sucesso!");
@@ -89,12 +88,12 @@ public class Main {
 
     private static void opcaoInvalida() {
         System.err.println("Opção Incorreta, por favor informe uma opção válida!");
-        menuDeOpcoes();
     }
 
     private static void encerrarPrograma() {
         System.out.println("Obrigado por utilizar o software Agenda IES - Workshop 2024");
         System.out.println("Até a próxima!!");
+        scanner.close();
         System.exit(0);
     }
 
